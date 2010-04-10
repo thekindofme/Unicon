@@ -1,0 +1,42 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  login_name: jaz312
+  first_name: jazmin
+  last_name: ferdo
+  email: jaz312@gmail.com
+  user_id: 0
+  contact_source_id: 0
+
+two:
+  login_name: kuratha32rocks
+  first_name: jhon
+  last_name: kuratha
+  email: jk2145@yahoo.com
+  user_id: 1
+  contact_source_id: 0
+
+three:
+  login_name: tlogin21
+  first_name: testfname21
+  last_name: lastnamej
+  email: tmailsw2@yahoo.com
+  user_id: 0
+  contact_source_id: 0
+
+four:
+  login_name: tlogin12
+  first_name: tfirstname
+  last_name: tloastname
+  email: jk2arsd5@live.com
+  user_id: 0
+  contact_source_id: 1
+
+five:
+  login_name: 1kula1
+  first_name: kularathna
+  last_name: jayasooriya
+  email: kjaya2001@gmail.com
+  user_id: 1
+  contact_source_id: 1
+

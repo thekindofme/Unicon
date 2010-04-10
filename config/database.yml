@@ -1,0 +1,23 @@
+development:
+ #adapter: mysql
+ adapter: jdbcmysql
+ database: unicon_dev
+ username: root
+ password:
+ host: 127.0.0.1
+
+
+test:
+ adapter: mysql
+ database: unicon_test
+ username: root
+ password:
+ host: 127.0.0.1
+
+
+production:
+ adapter: mysql
+ database: unicon_production
+ username: root
+ password: 
+ host: 127.0.0.1

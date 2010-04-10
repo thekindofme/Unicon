@@ -1,0 +1,28 @@
+<div id="<%=title%>_contacts">
+  <p><%=message%></p>
+  <table>
+    <%= 'none' if contact_col.length == 0 %>
+    <% for contact in contact_col %>
+      <tr>
+        <%#*<td>%>
+        <%#= check_box(contact[:title], 'checked', {}, "", '') %>
+        <%#*</td>%>
+        <td>
+          <div id="<%=title%>_contact">
+            <% if contact[:first_name] != nil && contact[:last_name]!=nil %>
+            Name: <%= contact[:first_name] + " " + contact[:last_name] %>
+            <% end %>
+            <div id="<%=title%>_contacts_emails">
+              Emails:
+              <% for email in contact[:emails] %>
+                <div id="<%=title%>_contacts_email">
+                  <%= email %>
+                </div>
+              <%  end %>
+            </div>
+          </div>
+        </td>
+      </tr>
+    <%  end %>
+  </table>
+</div>

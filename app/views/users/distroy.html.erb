@@ -1,0 +1,12 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<div id="delete_account_confirmation">
+  <b>Are you sure that you want to delete your account?</b>
+</div>
+<br>
+<p>
+  <%= link_to 'Yes', { :controller => "users", :action => "confirm_distroy" } %>
+  <%= link_to 'Back', { :controller => "users", :action => "show" } %>
+</p>

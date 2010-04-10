@@ -1,0 +1,18 @@
+<p>
+  <b>Link:</b>
+  <%=h @advertisement.link %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @advertisement.description %>
+</p>
+
+<p>
+  <b>Contact Detials:</b>
+  <%=h @advertisement.contact_details %>
+</p>
+
+
+<%= link_to 'Edit', edit_advertisement_path(@advertisement) %> |
+<%= link_to 'Back', advertisements_path %>

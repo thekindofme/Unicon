@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: test1@gmail.com
+  username: testu1
+  password: IGTF*S^&888sf
+  note: primary mail account
+  provider: gmail
+  user_id: 0
+
+two:
+  name: test2
+  username: testu2
+  password: IasfGTF*Saasf888sf
+  note: test twitter account
+  provider: twitter
+  user_id: 2
+
+three:
+  name: test3@gmail.com
+  username: testu3
+  password: IGTF*S^&888sf
+  note: est mail account
+  provider: gmail
+  user_id: 0
+
+four:
+  name: test4@gmail.com
+  username: testu4
+  password: I3523TF*S^&888sf
+  note: primary mail account
+  provider: gmail
+  user_id: 1
+
+five:
+  name: test5@gmail.com
+  username: testu5
+  password: 32*S^&2
+  note: another mail account
+  provider: gmail
+  user_id: 2
+
+six:
+  name: test6
+  username: testu6
+  password: I2qG3t^&888sf
+  note: twitter account 2
+  provider: twitter
+  user_id: 1

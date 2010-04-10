@@ -1,0 +1,39 @@
+<p>
+  <b>Login name:</b>
+  <%=h @contact.login_name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @contact.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @contact.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @contact.email %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @contact.note %>synced
+</p>
+
+<p>
+  <b>Synced with:</b>
+  <% @contact.contact_sources.each do |contact_source| %>
+  <%=h contact_source.name %>
+  <% end %>
+</p>
+
+<p>
+  <b>Contact Source:</b>
+  <%=h @contact.contact_source.name %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

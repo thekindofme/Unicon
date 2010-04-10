@@ -1,0 +1,24 @@
+<h1>Editing advertisement</h1>
+
+<% form_for(@advertisement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :cols=>30, :rows=>3 %>
+  </p>
+  <p>
+    <%= f.label :contact_details %><br />
+    <%= f.text_area :contact_details, :cols=>30, :rows=>3 %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @advertisement %> |
+<%= link_to 'Back', advertisements_path %>

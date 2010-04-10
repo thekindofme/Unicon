@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ one:
+   name: test_role_one
+
+ two:
+   name: test_role_two
+
+ admin:
+   id: 212
+   name: admin

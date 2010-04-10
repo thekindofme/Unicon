@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ad1:
+  link: http://www.responsibletravel.com/imagesclient/fiji_banner468x68_3.jpg
+  description: fiji's 333 diverse islands ad 3
+
+ad2:
+  link: http://www.responsibletravel.com/imagesclient/fiji_banner468x68_5.jpg
+  description: fiji's 333 diverse islands ad 5
+
+ad3:
+  link: http://www.energy-savings-benefits.com/images/hostgator-banner468x68.gif
+  description: web host ad
+
+ad4:
+  link: http://www.musicroom.com/affiliates/banner02_468x68a.gif
+  description: music room ad

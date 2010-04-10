@@ -1,0 +1,35 @@
+<div id="to_be_imported_and_exported_contacts">
+  <%=
+  render :partial => "contact_table", :locals => {
+    :title => "to_be_imported",
+    :message => "contacts that are yet <strong>to be imported</strong> to unicon:",
+    :contact_col => @to_be_imported
+  }
+%>
+
+  <%=
+  render :partial => "contact_table", :locals => {
+    :title => "to_be_exported",
+    :message => "contacts that are yet <strong>to be exported</strong> from unicon:",
+    :contact_col => @to_be_exported
+  }
+%>
+
+  <%=
+  render :partial => "contact_table", :locals => {
+    :title => "to_be_deleted_localy",
+    :message => "contacts that are yet <strong>to be deleted localy</strong> in unicon:",
+    :contact_col => @to_be_deleted_localy
+  }
+%>
+
+  <%=
+  render :partial => "contact_table", :locals => {
+    :title => "to_be_deleted_remotly",
+    :message => "contacts that are yet <strong>to be deleted remotly</strong> from the contact provider:",
+    :contact_col => @to_be_deleted_remotly
+  }
+%>
+</div>
+
+<%=  button_to "Do Sync", { :action => "sync" }, :method => :post %>

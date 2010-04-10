@@ -1,0 +1,50 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<h1>Users of Unicon</h1>
+<br>
+<div id="user_listing">
+  <table id="user_listing_outer_table">
+    <%  for user in @users %>
+      <tr>
+        <td><b><%= user.login %></b></td>
+        <td>
+          <table id="user_listing_inner_table">
+            <tr>
+              <td>login count</td>
+              <td><%= user.login_count %></td>
+            </tr>
+            <tr>
+              <td>last request at</td>
+              <td><%= user.last_request_at %></td>
+            </tr>
+            <tr>
+              <td>last login at</td>
+              <td><%= user.last_login_at %></td>
+            </tr>
+            <tr>
+              <td>current login at</td>
+              <td><%= user.current_login_at %></td>
+            </tr>
+            <tr>
+              <td>last login ip</td>
+              <td><%= user.last_login_ip %></td>
+            </tr>
+            <tr>
+              <td>current login ip</td>
+              <td><%= user.current_login_ip %></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <div class="user_actions">
+            <p><%= link_to 'Info', {:controller => "users" ,:action => "show_as_admin", :id=> user.id} %> | 
+            <%= link_to 'Destroy', {:controller => "users" ,:action => "distroy_by_admin", :id=> user.id}, :confirm => 'Are you sure?' %></p>
+          </div>
+        </td>
+      </tr>
+     <%  end %>
+  </table>
+</div>

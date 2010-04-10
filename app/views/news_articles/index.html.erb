@@ -1,0 +1,24 @@
+<h1>News Updates</h1>
+<br>
+<div id="news">
+  <% for news_article in @news_articles %>
+    <div class="news_article">
+      <h3 class="news_article_title"><%=h news_article.title %></h3>
+      <p class="news_article_body"><%=h news_article.body %></p>
+      <p class="news_article_updated_at"><i>last updated at: <%=h news_article.updated_at %></i></p>
+      <ul class="news_article_actions">
+        <%= link_to 'Show', news_article %>
+        <% if @is_admin %>
+          <%= link_to 'Edit', edit_news_article_path(news_article) %>
+          <%= link_to 'Destroy', news_article, :confirm => 'Are you sure?', :method => :delete %>
+        <% end %>
+      </ul>
+    </div>
+  <br>
+  <% end %>
+</div>
+
+<br />
+<% if @is_admin %>
+<%= link_to 'New Post', new_news_article_path %>
+<% end %>

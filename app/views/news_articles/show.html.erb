@@ -1,0 +1,16 @@
+<p class="news_article_title">
+  <h3><%=h @news_article.title %></h3>
+</p>
+
+<p class="news_article_body">
+  <%=h @news_article.body %>
+</p>
+
+<p class="news_article_updated_at">
+  <%=h @news_article.updated_at %>
+</p>
+
+<% if @is_admin %>
+  <%= link_to 'Edit', edit_news_article_path(@news_article) %> |
+<% end %>
+<%= link_to 'Back', news_articles_path %>

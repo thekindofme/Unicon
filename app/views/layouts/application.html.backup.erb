@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title><%= @title %></title>
+    <%= stylesheet_link_tag 'unicon' %>
+    <%= javascript_include_tag :defaults %>
+  </head>
+  <body>
+    <div id="main_body">
+      <div id="navigation_container">
+        <% for navigation_item in @navigation_items %>
+          <%
+          case
+          when navigation_item.class_to_s == "ApplicationController::NavigationToResoureceMappedControllerActionItem"
+          %>
+            <%= link_to navigation_item.title, navigation_item.link, :method => navigation_item.method, :confirm => navigation_item.confim_message %>
+          <%
+          when navigation_item.class_to_s == "ApplicationController::NavigationToControllerActionItem"
+          %>
+            <%= link_to navigation_item.title, :controller => navigation_item.controller, :action => navigation_item.action %>
+          <%
+          else
+          %>
+            <%= link_to navigation_item.title, navigation_item.link %>
+          <%
+          end
+        %>
+        <% end %>
+      </div>
+      <div id="banner">
+        <h1>unicon</h1>
+      </div>
+      <% if(flash[:notice]) %>
+        <p id="flash_notice" style="color: green"><%= flash[:notice] %></p>
+      <% end %>
+      <div id="main_content">
+        <%= yield  %>
+      </div>
+
+      <div id="footer_container">
+        <p id="footer_text"> unicon - it's all centerlized</p>
+        <p id="footer_text"><%= Time.now %> - <%= pluralize User.logged_in.count, "user" %> currently logged in </p>
+      </div>
+    </div>
+  </body>
+</html>

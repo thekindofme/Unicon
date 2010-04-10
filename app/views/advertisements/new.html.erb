@@ -1,0 +1,28 @@
+<h1>Advertise in Unicon now!</h1>
+<p>Do you want to reach our users? if so you can put a advertisement on Unicon. send us a message informing
+what kind of a advertisement you have in mind and how long you want it to be displayed. please send us
+your contact details and a link to a advertisement(preferably a image: 468x60 pixels). we will contact
+you within 24 hours.</p>
+<br>
+
+<% form_for(@advertisement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :cols=>70, :rows=>3 %>
+  </p>
+  <p>
+    <%= f.label :contact_details %><br />
+    <%= f.text_area :contact_details, :cols=>70, :rows=>3 %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', advertisements_path %>

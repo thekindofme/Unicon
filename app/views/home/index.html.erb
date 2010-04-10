@@ -1,0 +1,31 @@
+<div class="intro">
+  <p class="teaser">Unicon is a service that helps you manage all your contacts that are scattered
+  around many services, from one place.</p>
+
+  <p><%= link_to "Join Now!", {:controller => "users", :action => "new"}, :id => "signup_submit", :class => "join"%></p>
+</div>
+
+<div id="signin" class="styledfrom">
+  <% form_for @user_session, :html =>{:id => "signin"}, :url => user_session_path do |f| %>
+
+    <legend><strong>Please sign in</strong></legend>
+    <%= f.error_messages %>
+      <p>
+        <%= f.label :login %>
+        <%= f.text_field :login, :class => "inside", :tabindex => "1" %>
+      </p>
+      <p>
+        <%= f.label :password %>
+        <%= f.password_field :password, :class => "inside", :tabindex => "2" %>
+      </p>
+      <p class="remember">
+        <%= f.check_box :remember_me, :id => "remember" %><%= f.label :remember_me %>
+      </p>
+      <p class="submit">
+        <%= f.submit "Login" %>
+      </p>
+      <p class="forgot">
+        Forgot password? <a id="resend_password_link" href="<%=  new_password_reset_path %>">Click here</a>.
+      </p>
+  <% end %>
+</div>

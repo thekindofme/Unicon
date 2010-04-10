@@ -1,0 +1,29 @@
+<p>
+  <b>Name:</b>
+  <%=h @contact_source.name %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%=h @contact_source.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @contact_source.password %>
+</p>
+
+<p>
+  <b>Provider:</b>
+  <%=h @contact_source.provider %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @contact_source.note %>
+</p>
+
+
+<%= link_to "Sync", :controller => "contact_sources", :action => "sync", :id => @contact_source%> |
+<%= link_to 'Edit', edit_contact_source_path(@contact_source) %> |
+<%= link_to 'Back', contact_sources_path %>

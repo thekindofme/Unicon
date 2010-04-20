@@ -6,4 +6,4 @@ This is what i did for my BCS HEQ Project in IT. Unicon is a universal contact m
 * My Blog: [http://thekindofme.wordpress.com](http://thekindofme.wordpress.com)
 
 
-Copyright (c) 2008 [Ben Johnson](http://github.com/binarylogic) of [Binary Logic](http://www.binarylogic.com), released under the MIT license
+Copyright (c) 2009 [YasithF](http://thekindofme.wordpress.com), released under the GPLv2 license
